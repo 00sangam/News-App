@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand font-weight-bold text-success">News-Adda</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#business">Business</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#entertainment">Entertainment</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#general">General</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#health">Health</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#science">Science</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#sports">Sports</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#technology">Technology</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <h2 style="margin-left: 82px; margin-top: 20px">
+        Latest News for <span id="LatestNews"></span>
+      </h2>
+    </div>
+    <div
+      id="data_container"
+      class="row my-4"
+      style="justify-content: center"
+    ></div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
+</html>
