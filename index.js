@@ -1,5 +1,6 @@
 let data_container = document.getElementById("data_container");
 let navbar = document.querySelectorAll("li");
+let errorMessage = document.getElementById("error");
 
 const newsData = (value) => {
   LatestNews.innerHTML = value;
@@ -11,6 +12,7 @@ const newsData = (value) => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       ihtml = "";
       data.articles.map((item) => {
         console.log(item);
@@ -37,8 +39,11 @@ const newsData = (value) => {
 
         data_container.innerHTML = ihtml;
       });
-    });
-};
+    }).catch((error)=>{
+      errorMessage.innerHTML = "Not found !"
+
+    })
+}
 
 Array.from(navbar).forEach((a) => {
   a.addEventListener("click", (e) => {
@@ -46,6 +51,6 @@ Array.from(navbar).forEach((a) => {
     newsData(e.target.innerHTML);
     console.log();
   });
-});
+})
 
 newsData("Business");
